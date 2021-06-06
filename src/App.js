@@ -51,7 +51,7 @@ const App = () => {
   }
 
   // Delete Task ----------- FIX ME -----------
-  const deleteTask = async (id) => {
+  const deleteTask = (id) => {
     const res = fetch(`http://localhost:5000/tasks/${id}`, {
       method: 'DELETE',
     })
