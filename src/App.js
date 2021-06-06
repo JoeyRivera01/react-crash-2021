@@ -35,9 +35,9 @@ const App = () => {
     return data
   }
 
-  // Add Task
+  // Add Task ----------- FIX ME -----------
   const addTask = async (task) => {
-    const res = await fetch('http://localhost:5000/tasks', {
+    const res = fetch('http://localhost:5000/tasks', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -45,18 +45,14 @@ const App = () => {
       body: JSON.stringify(task),
     })
 
-    const data = await res.json()
+    const data = res.json()
 
     setTasks([...tasks, data])
-
-    // const id = Math.floor(Math.random() * 10000) + 1
-    // const newTask = { id, ...task }
-    // setTasks([...tasks, newTask])
   }
 
-  // Delete Task
+  // Delete Task ----------- FIX ME -----------
   const deleteTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+    const res = fetch(`http://localhost:5000/tasks/${id}`, {
       method: 'DELETE',
     })
     //We should control the response status to decide if we will change the state or not.
