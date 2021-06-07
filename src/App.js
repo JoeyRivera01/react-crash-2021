@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+// ---------- FIX ME --------
+// import the two required hooks from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -7,8 +8,13 @@ import AddTask from './components/AddTask'
 import About from './components/About'
 
 const App = () => {
-  const [showAddTask, setShowAddTask] = useState(false)
-  const [tasks, setTasks] = useState([])
+  // ---------- FIX ME --------
+  // create a showAddTask state and set the default value to false.
+  // create a tasks state and set the default to an empty array.
+
+  // ---------- FIX ME --------
+  // create an effect that console logs "tasks changed" ONLY when the tasks state changes.
+
 
   useEffect(() => {
     const getTasks = async () => {
